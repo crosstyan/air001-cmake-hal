@@ -1,14 +1,10 @@
 #ifndef __AIR001xx_HAL_CONF_H
 #define __AIR001xx_HAL_CONF_H
 
-/* AIR001xx specific HAL configuration options. */
-#if __has_include("hal_conf_custom.h")
-#include "hal_conf_custom.h"
-#else
-#if __has_include("hal_conf_extra.h")
-#include "hal_conf_extra.h"
-#endif
-#include "air001xx_hal_conf_default.h"
-#endif
+#define HAL_MODULE_ENABLED 1
+#define HAL_CORTEX_MODULE_ENABLED 1
+#define HAL_GPIO_MODULE_ENABLED 1
+#define HAL_RCC_MODULE_ENABLED 1
 
+#include "air001xx_hal_conf_default.h"
 #endif /* __AIR001xx_HAL_CONF_H */

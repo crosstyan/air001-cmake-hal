@@ -9,6 +9,10 @@ add_subdirectory(lib)
 
 add_library(config INTERFACE)
 target_include_directories(config INTERFACE config)
+add_compile_definitions(
+        AIR001_DEV
+        ARM_MATH_CM0PLUS
+)
 
 add_executable(${PROJECT_NAME}.elf)
 target_sources(${PROJECT_NAME}.elf PRIVATE src/main.cpp)
