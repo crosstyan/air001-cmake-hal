@@ -5,9 +5,11 @@ enable_language(ASM)
 enable_language(C)
 enable_language(CXX)
 
+# target `config` should be defined before `hal`
+# since `hal` depends on `config`
+add_library(config INTERFACE)
 add_subdirectory(lib)
 
-add_library(config INTERFACE)
 target_include_directories(config INTERFACE config)
 add_compile_definitions(
         AIR001_DEV
